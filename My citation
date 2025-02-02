@@ -59,8 +59,9 @@
       <else-if type="webpage">
         <text macro="title" suffix="[EB/OL]. "/>
       </else-if>
+      <!-- Default to [J] if type is missing -->
       <else>
-        <text macro="title"/>
+        <text macro="title" suffix="[J]. "/>
       </else>
     </choose>
   </macro>
@@ -81,7 +82,7 @@
     <sort>
       <key variable="citation-number" sort="ascending"/>
     </sort>
-    <layout vertical-align="sup" prefix="[" suffix="]" delimiter=",">
+    <layout vertical-align="sup" prefix="[" suffix="]" delimiter=", ">
       <text variable="citation-number"/>
     </layout>
   </citation>
